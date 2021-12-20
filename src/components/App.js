@@ -30,7 +30,7 @@ componentDidMount(){
           <Route  path="/" element={<QuestionList/>} />
           <Route  path="/add" element={<QuestionForm/>} />
           <Route  path="/leaderboard" element={<Leaderboard/>} />
-          <Route  path="/question/:question_id" element={<QuestionExpanded/>} />
+          <Route  path="/questions/:question_id" element={<QuestionExpanded/>} />
           <Route  path="*" element={<PageNotFound/>} />
         </Routes>
         </div>

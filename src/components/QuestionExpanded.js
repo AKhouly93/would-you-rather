@@ -11,8 +11,6 @@ function QuestionExpanded (props)
     const question = questions[question_id];
     const answers = users[authedUser].answers;
     const [isAnswered, setIsAnswered]= useState(answers.hasOwnProperty(question_id));
-    
-    
     const [selectedOption, setSelectedOption]=useState('optionOne');
     const { dispatch } = props;
 
@@ -107,10 +105,6 @@ function QuestionExpanded (props)
         return <div>error</div>;
     }
 }
-
-
-
-
 const mapStateToProps = (store)=>{
     
     return {

@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 import { useState } from 'react';
 import { handlePostQuestion } from '../actions/actionCreators';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 
 function QuestionForm (props){
     const { dispatch, author } = props;
     const [optionOneText, setOptionOne] = useState('');
-    const [optionTwoText, setOptionTwo] = useState('')
+    const [optionTwoText, setOptionTwo] = useState('');
+    const navigate = useNavigate();
     const handleUpdateOptionOne = (value) =>{
         setOptionOne(value);
     }
@@ -19,11 +21,12 @@ function QuestionForm (props){
             dispatch(handlePostQuestion({ optionOneText, optionTwoText, author }));
             setOptionOne('');
             setOptionTwo('');
-            alert('Question added..')
+            alert('Question added.. You will be directed to homepage.')
+            navigate('/')
         }
         else
         {
-            alert('Please provide to options..')
+            alert('Please, provide two options!')
         }
     }
     return (

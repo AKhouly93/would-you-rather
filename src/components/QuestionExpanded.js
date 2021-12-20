@@ -10,7 +10,7 @@ function QuestionExpanded (props)
     const { authedUser, questions, users } = props;
     const question = questions[question_id];
     const answers = users[authedUser].answers;
-    const isAnswered = answers.hasOwnProperty(question_id);
+    const [isAnswered, setIsAnswered]= useState(answers.hasOwnProperty(question_id));
     const author =  users[question.author];
     const optionOneVotes = question.optionOne.votes.length;
     const optionTwoVotes= question.optionTwo.votes.length;
@@ -40,7 +40,7 @@ function QuestionExpanded (props)
         const qid = question_id;
         const answer = selectedOption;
         dispatch(handleAnswerQuestion({ authedUser, qid, answer }));
-        navigate('/');
+        setIsAnswered(true);
     };
     const handleChoose = (value) =>{
         setSelectedOption(value);

@@ -25,7 +25,7 @@ function Question (props) {
                  </div>
              </div>
              <div className= "card-button">
-               <Link to={`/question/${props.qid}`}> 
+               <Link to={`/questions/${props.qid}`}> 
                   <button>{props.answered ? "Show Details..." : "Answer"}</button>
                </Link>
              </div>

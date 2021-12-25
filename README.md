@@ -29,7 +29,8 @@ Thanks for:
 - Ahmed Ibrahim
 - Tyler McGinnis
 - stackoverflow.com and its users
-Avatars downloaded from Freepik.com
+-----
+- Avatars downloaded from Freepik.com
 
 
 
